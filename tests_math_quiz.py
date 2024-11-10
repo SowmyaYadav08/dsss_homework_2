@@ -13,7 +13,10 @@ class TestMathGame(unittest.TestCase):
             self.assertTrue(min_val <= rand_num <= max_val)
 
     def test_gen_operator(self):
-        # TODO
+        operators = {'+', '-', '*'}
+        for _ in range(1000):  # Test multiple times for randomness
+            operator = gen_operator()
+            self.assertIn(operator, operators)
         pass
 
     def test_create_math_problem(self):
